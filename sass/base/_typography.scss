@@ -1,0 +1,27 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-black;
+}
+
+.main-header {
+  text-transform: uppercase;
+  text-align: center;
+
+  &--1 {
+    display: block;
+    font-size: 5.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    padding-bottom: 4rem;
+  }
+
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #fff 20%, #be8abf);
+  color: transparent;
+  transition: all 0.2s;
+}
