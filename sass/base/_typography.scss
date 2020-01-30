@@ -8,6 +8,7 @@ body {
 .main-header {
   text-transform: uppercase;
   text-align: center;
+  backface-visibility: hidden;
 
   &--1 {
     display: block;
@@ -18,10 +19,9 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     padding-bottom: 4rem;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #fff 20%, #be8abf);
+    color: transparent;
+    transition: all 0.2s;
   }
-
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #fff 20%, #be8abf);
-  color: transparent;
-  transition: all 0.2s;
 }
