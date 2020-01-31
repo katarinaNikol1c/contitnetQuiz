@@ -1,0 +1,14 @@
+.quiz-container {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-first, 0.9),
+    rgba($color-primary-forth, 0.9)
+  );
+}
+
+.question-photo {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  height: 350px;
+}

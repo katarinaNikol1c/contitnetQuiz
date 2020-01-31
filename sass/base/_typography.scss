@@ -18,10 +18,20 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    padding-bottom: 4rem;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #fff 20%, #be8abf);
+    background-image: linear-gradient(
+      to right,
+      $color-white 20%,
+      $color-primary-third
+    );
     color: transparent;
     transition: all 0.2s;
+  }
+
+  &--3 {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: $color-white;
   }
 }

@@ -49,11 +49,18 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    padding-bottom: 4rem;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #fff 20%, #be8abf);
+    background-image: linear-gradient(to right, #fff 20%, #fea5ad);
     color: transparent;
     transition: all 0.2s; }
+  .main-header--3 {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: #fff; }
+
+.u-padding-bottom-big {
+  padding-bottom: 4rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -132,3 +139,12 @@ body {
   animation-name: moveInBottom;
   animation-duration: 1s;
   animation-timing-function: ease-in; }
+
+.quiz-container {
+  background-image: linear-gradient(to right bottom, rgba(190, 138, 191, 0.9), rgba(248, 195, 175, 0.9)); }
+
+.question-photo {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  height: 350px; }
