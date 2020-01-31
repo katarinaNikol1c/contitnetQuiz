@@ -1,0 +1,12 @@
+.col {
+  max-height: $grid-height;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-horizontal;
+  }
+}
+
+.row-1-of-3 {
+  height: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+}

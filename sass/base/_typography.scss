@@ -35,3 +35,17 @@ body {
     color: $color-white;
   }
 }
+
+.score-position {
+  border: 1px solid rgba($color-gray, 0.4);
+  border-radius: 50%;
+  padding: 0 0.7rem;
+  width: 10%;
+}
+
+.score-points {
+  float: right;
+  width: 75%;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
