@@ -1,14 +1,16 @@
-.quiz-container {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-first, 0.9),
-    rgba($color-primary-forth, 0.9)
-  );
+.question-container {
+  background-color: $color-white;
+  border-radius: 1rem;
+  margin: 0 auto;
+  width: 45%;
+  box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba($color-black, 0.64);
 }
 
 .question-photo {
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 100%;
+  padding-top: 2rem;
 }

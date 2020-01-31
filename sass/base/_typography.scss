@@ -30,14 +30,14 @@ body {
 
   &--3 {
     display: block;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-weight: 400;
     color: $color-white;
   }
 }
 
 .score-place {
-  border: 1px solid rgba($color-gray, 0.4);
+  border: 1px solid rgba($color-primary-first, 0.4);
   border-radius: 50%;
   padding: 0 0.7rem;
   width: 10%;
