@@ -18,12 +18,12 @@
   left: 50%;
 }
 
-.score-container {
+.score-list-container {
   background-color: $color-white;
-  border-radius: 10px;
+  border-radius: 1rem;
   margin: 0 auto;
   width: 50%;
-  box-shadow: -12px 15px 22px 5px rgba($color-black, 0.64);
+  box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba($color-black, 0.64);
   margin-bottom: 5rem;
 }
 
@@ -31,19 +31,37 @@
   text-align: center;
   list-style: none;
   text-transform: uppercase;
-  padding-top: 20px;
-  font-size: 30px;
+  padding-top: 2rem;
+  font-size: 3rem;
   color: $color-primary-third;
   height: 50%;
 }
 
-.score-list--position {
-  font-size: 24px;
-  margin: 1.5rem auto;
+.scores {
+  margin: 0 auto;
   width: 36%;
-  animation-name: moveInBottom;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  border: 1px solid $color-primary-third;
-  border-radius: 35rem;
+  position: relative;
+
+  &--position {
+    font-size: 2.4rem;
+    margin: 1.8rem auto;
+    width: 100%;
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    border: 1px solid $color-primary-third;
+    border-radius: 35rem;
+    box-shadow: 0 0.4rem 0rem 0.1rem rgba($color-primary-first, 0.5);
+    z-index: 5;
+
+    &:hover {
+      transition: all 0.3s;
+      transform: scale(1.15) translateY(-0.6rem);
+      z-index: 10;
+      box-shadow: 0 1rem 2rem 0.1rem rgba($color-primary-first, 0.8);
+    }
+  }
+  &:hover &--position:not(:hover) {
+    transform: scale(0.95);
+  }
 }
