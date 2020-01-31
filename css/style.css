@@ -55,7 +55,7 @@ body {
     transition: all 0.2s; }
   .main-header--3 {
     display: block;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     color: #fff; }
 
@@ -74,12 +74,14 @@ body {
 .u-padding-bottom-big {
   padding-bottom: 4rem; }
 
+.u-margin-top-medium {
+  margin-top: 2.5rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  margin: 0 auto;
   width: 16%;
-  padding: 1.5rem 4rem;
+  padding: 0.6rem 4rem;
   display: inline-block;
   border-radius: 10rem;
   position: relative;
@@ -116,17 +118,11 @@ body {
   z-index: -1;
   transition: all 0.3s; }
 
-.col {
-  max-height: 40rem;
-  margin: 0 auto; }
-  .col:not(:last-child) {
-    margin-bottom: 7rem; }
-
 .row-1-of-3 {
   height: calc((100% - 2 * 7rem) / 3); }
 
 .row-1-of-2 {
-  height: calc((100% - 3rem) / 2); }
+  height: calc(100% / 2); }
 
 .main-container {
   background-image: linear-gradient(to right bottom, rgba(190, 138, 191, 0.8), rgba(248, 195, 175, 0.8)), url("../../img/dawn-3358468_1920.jpg");
@@ -146,8 +142,7 @@ body {
   border-radius: 1rem;
   margin: 0 auto;
   width: 50%;
-  box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64);
-  margin-bottom: 5rem; }
+  box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64); }
 
 .score-list {
   text-align: center;
@@ -185,7 +180,8 @@ body {
   background-color: #fff;
   border-radius: 1rem;
   margin: 0 auto;
-  width: 45%;
+  width: 37%;
+  height: 66%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64); }
 
 .question-photo {
@@ -195,3 +191,31 @@ body {
   width: 80%;
   height: 100%;
   padding-top: 2rem; }
+
+.answer {
+  position: relative;
+  display: block;
+  width: 46%;
+  margin: 3rem auto;
+  font-size: 1.5rem; }
+  .answer label {
+    display: block;
+    background: #fff1f2;
+    color: #ea9abb;
+    border-radius: 35rem;
+    padding: 0.5rem 2rem;
+    border: 1px solid #ea9abb;
+    cursor: pointer;
+    appearance: none; }
+  .answer input[type='radio'] {
+    display: none;
+    position: absolute;
+    width: 100%;
+    appearance: none; }
+    .answer input[type='radio']:checked + label {
+      background: #f7d9e6;
+      border-color: #ea9abb; }
+  .answer:hover {
+    transition: all 0.3s;
+    transform: scale(1.2) translateY(-0.6rem);
+    z-index: 10; }
