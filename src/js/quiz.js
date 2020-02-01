@@ -416,8 +416,8 @@ function checkTheAnswer() {
 
   // Check if max num of questions has been reached.
   if (quizStats.counter < NUMQUESTIONS) {
-    setTimeout(clearClasses, 2000);
-    setTimeout(getNextQuestion, 2000);
+    setTimeout(clearClasses, 500);
+    setTimeout(getNextQuestion, 500);
   }
   // If so, stop the quiz.
   else {

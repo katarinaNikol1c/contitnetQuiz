@@ -232,23 +232,27 @@ body {
     border: 1px solid #ea9abb;
     cursor: pointer;
     appearance: none; }
-    .answer label:hover {
-      transition: all 0.3s;
-      transform: scale(1.2) translateY(-0.6rem);
-      z-index: 10;
-      background: #f7d9e6;
-      color: #fff;
-      font-weight: 700; }
   .answer input[type="radio"] {
     display: none;
     position: absolute;
     width: 100%;
     appearance: none; }
   .answer .wrong {
-    background-color: red;
-    color: #fff; }
+    transition: all 0.3s;
+    transform: scale(1.2) translateY(-0.6rem);
+    z-index: 10;
+    background: #ef8c8a;
+    color: #fff;
+    border: 1px solid #e33330;
+    font-weight: 700; }
   .answer .correct {
-    background-color: green; }
+    transition: all 0.3s;
+    transform: scale(1.2) translateY(-0.6rem);
+    z-index: 10;
+    background: #a8f4a9;
+    color: #fff;
+    border: 1px solid #18b81a;
+    font-weight: 700; }
 
 .result-container {
   background-color: #fff;
