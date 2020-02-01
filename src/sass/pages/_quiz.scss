@@ -3,7 +3,7 @@
   border-radius: 1rem;
   margin: 0 auto;
   width: 37%;
-  height: 66%;
+  height: 78%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba($color-black, 0.64);
 }
 
@@ -22,6 +22,8 @@
   width: 46%;
   margin: 3rem auto;
   font-size: 1.5rem;
+  text-transform: uppercase;
+
   label {
     display: block;
     background: lighten($color-primary-third, 15%);
@@ -31,21 +33,27 @@
     border: 1px solid $color-primary-second;
     cursor: pointer;
     appearance: none;
+
+    &:hover {
+      transition: all 0.3s;
+      transform: scale(1.2) translateY(-0.6rem);
+      z-index: 10;
+      background: lighten($color-primary-second, 15%);
+      color: $color-white;
+    }
   }
-  input[type='radio'] {
+  input[type="radio"] {
     display: none;
     position: absolute;
     width: 100%;
     appearance: none;
-    &:checked + label {
-      background: lighten($color-primary-second, 15%);
-      border-color: $color-primary-second;
-    }
   }
+}
 
-  &:hover {
-    transition: all 0.3s;
-    transform: scale(1.2) translateY(-0.6rem);
-    z-index: 10;
-  }
+.wrong {
+  background-color: red;
+}
+
+.correct {
+  background-color: green;
 }
