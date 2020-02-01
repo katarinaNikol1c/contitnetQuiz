@@ -237,18 +237,18 @@ body {
       transform: scale(1.2) translateY(-0.6rem);
       z-index: 10;
       background: #f7d9e6;
-      color: #fff; }
+      color: #fff;
+      font-weight: 700; }
   .answer input[type="radio"] {
     display: none;
     position: absolute;
     width: 100%;
     appearance: none; }
-
-.wrong {
-  background-color: red; }
-
-.correct {
-  background-color: green; }
+  .answer .wrong {
+    background-color: red;
+    color: #fff; }
+  .answer .correct {
+    background-color: green; }
 
 .result-container {
   background-color: #fff;

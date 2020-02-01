@@ -40,6 +40,7 @@
       z-index: 10;
       background: lighten($color-primary-second, 15%);
       color: $color-white;
+      font-weight: 700;
     }
   }
   input[type="radio"] {
@@ -48,12 +49,13 @@
     width: 100%;
     appearance: none;
   }
-}
 
-.wrong {
-  background-color: red;
-}
+  .wrong {
+    background-color: red;
+    color: $color-white;
+  }
 
-.correct {
-  background-color: green;
+  .correct {
+    background-color: green;
+  }
 }

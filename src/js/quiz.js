@@ -6,7 +6,7 @@ let quizSequence = [];
 
 let quizStats = {
   counter: 0,
-  correct: 0,
+  score: 0,
   currentQuestion: 0
 };
 
@@ -84,7 +84,7 @@ function quizQuestions() {
   questionsMap.set(1, {
     image: questionsArray[0].image,
     a: "Antarctica",
-    b: "Europe.",
+    b: "Europe",
     c: "North America",
     answer: questionsArray[0].continent
   });
@@ -118,7 +118,7 @@ function quizQuestions() {
   });
   questionsMap.set(6, {
     image: questionsArray[5].image,
-    a: "Europe.",
+    a: "Europe",
     b: "Oceania",
     c: "North America",
     answer: questionsArray[5].continent
@@ -148,7 +148,7 @@ function quizQuestions() {
     image: questionsArray[9].image,
     a: "Oceania",
     b: "South America",
-    c: "Europe.",
+    c: "Europe",
     answer: questionsArray[9].continent
   });
   questionsMap.set(11, {
@@ -388,30 +388,24 @@ function getNextQuestion() {
 
   // Track the current question.
   quizStats.currentQuestion = qn;
-}
 
-// Add event listeners.
-function addEventListeners() {
   answerA.addEventListener("click", checkTheAnswer);
   answerB.addEventListener("click", checkTheAnswer);
   answerC.addEventListener("click", checkTheAnswer);
-}
 
-// Add data attributes.
-function addDataAttributes() {
-  answerA.setAttribute("data-answer", "a");
-  answerB.setAttribute("data-answer", "b");
-  answerC.setAttribute("data-answer", "c");
+  answerA.setAttribute("data-answer", questionsMap.get(qn).a);
+  answerB.setAttribute("data-answer", questionsMap.get(qn).b);
+  answerC.setAttribute("data-answer", questionsMap.get(qn).c);
 }
 
 // Check the answer.
 function checkTheAnswer() {
-  // Get the answers.
   let givenAnswer = this.dataset.answer,
     correctAnswer = questionsMap.get(quizStats.currentQuestion).answer;
+  console.log(this.dataset.answer, correctAnswer);
 
-  if (givenAnswer === correctAnswer) {
-    quizStats.correct++;
+  if (givenAnswer == correctAnswer) {
+    quizStats.score += 750;
     this.classList.add("correct");
   } else {
     this.classList.add("wrong");
@@ -422,8 +416,8 @@ function checkTheAnswer() {
 
   // Check if max num of questions has been reached.
   if (quizStats.counter < NUMQUESTIONS) {
-    setTimeout(clearClasses, 1000);
-    setTimeout(getNextQuestion, 1000);
+    setTimeout(clearClasses, 2000);
+    setTimeout(getNextQuestion, 2000);
   }
   // If so, stop the quiz.
   else {
@@ -431,40 +425,19 @@ function checkTheAnswer() {
   }
 }
 
-// Clear classes.
 function clearClasses() {
   answerA.classList.remove("correct", "wrong");
   answerB.classList.remove("correct", "wrong");
   answerC.classList.remove("correct", "wrong");
 }
 
-// The results.
 function showTheResults() {
-  alert("you are done");
-  /*
-    let numCorrect = document.getElementById("num-correct"),
-			numWrong = document.getElementById("num-wrong"),
-			numTotal = document.getElementById("num-total");
-	
-	// Get the results.
-	let correct = quizStats.correct,
-			wrong = quizStats.wrong,
-			total = NUMQUESTIONS;
-	
-	// Print the results.
-	numCorrect.textContent = correct;
-	numWrong.textContent = wrong;
-	numTotal.textContent = total;
-	
-	// Display the results.
-    document.getElementsByClassName("results-container")[0].classList.add("display");
-    */
+  alert(quizStats.score);
 }
 
 (function startQuiz() {
   quizQuestions();
+  console.log(questionsMap);
   determineSequence();
   getNextQuestion();
-  addEventListeners();
-  addDataAttributes();
 })();
