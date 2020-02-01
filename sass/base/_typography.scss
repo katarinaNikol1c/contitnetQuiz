@@ -28,6 +28,13 @@ body {
     transition: all 0.2s;
   }
 
+  &--2 {
+    display: block;
+    font-size: 3rem;
+    color: $color-primary-first;
+    font-weight: 400;
+  }
+
   &--3 {
     display: block;
     font-size: 1.8rem;
@@ -48,4 +55,16 @@ body {
   width: 75%;
   font-weight: 700;
   font-size: 2.5rem;
+}
+
+.score {
+  font-size: 7rem;
+  line-height: 1.1;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-forth,
+    $color-primary-first
+  );
+  color: transparent;
+  -webkit-background-clip: text;
 }
