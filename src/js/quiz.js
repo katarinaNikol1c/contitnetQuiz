@@ -385,7 +385,6 @@ function getNextQuestion() {
   answerC.setAttribute("data-answer", questionsMap.get(qn).c);
 }
 
-// Check the answer.
 function checkTheAnswer() {
   let givenAnswer = this.dataset.answer,
     correctAnswer = questionsMap.get(quizStats.currentQuestion).answer;
@@ -413,7 +412,7 @@ function clearClasses() {
 }
 
 function showTheResults() {
-  document.location.href = "./result.html";
+  window.location.href = "./result.html";
 }
 
 (function startQuiz() {
