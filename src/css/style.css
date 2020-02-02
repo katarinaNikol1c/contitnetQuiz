@@ -27,6 +27,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -53,17 +62,27 @@ body {
     background-image: linear-gradient(to right, #fff 20%, #fea5ad);
     color: transparent;
     transition: all 0.2s; }
+    @media only screen and (max-width: 37.5em) {
+      .main-header--1 {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .main-header--2 {
     display: block;
     font-size: 3rem;
     color: #be8abf;
     font-weight: 400;
     letter-spacing: 0.7rem; }
+    @media only screen and (max-width: 37.5em) {
+      .main-header--2 {
+        letter-spacing: 0.5rem; } }
   .main-header--3 {
     display: block;
     font-size: 1.8rem;
     font-weight: 400;
     color: #fff; }
+    @media only screen and (max-width: 37.5em) {
+      .main-header--3 {
+        letter-spacing: 0.5rem; } }
 
 .score-place {
   border: 1px solid rgba(190, 138, 191, 0.4);

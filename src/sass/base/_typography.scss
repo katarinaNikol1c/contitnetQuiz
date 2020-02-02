@@ -26,6 +26,11 @@ body {
     );
     color: transparent;
     transition: all 0.2s;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--2 {
@@ -34,6 +39,10 @@ body {
     color: $color-primary-first;
     font-weight: 400;
     letter-spacing: 0.7rem;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 
   &--3 {
@@ -41,6 +50,10 @@ body {
     font-size: 1.8rem;
     font-weight: 400;
     color: $color-white;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 

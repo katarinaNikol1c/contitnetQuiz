@@ -1,14 +1,15 @@
-@import 'abstracts/variables';
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-@import 'base/animations';
-@import 'base/base';
-@import 'base/typography';
-@import 'base/utilitis';
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilitis";
 
-@import 'components/button';
+@import "components/button";
 
-@import 'layout/grid';
+@import "layout/grid";
 
-@import 'pages/home';
-@import 'pages/quiz';
-@import 'pages/result';
+@import "pages/home";
+@import "pages/quiz";
+@import "pages/result";
