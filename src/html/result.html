@@ -24,7 +24,7 @@
       <div class="home-box">
         <div class="result-container">
           <h2 class="main-header main-header--2">Your score is :</h2>
-          <p class="score">2100</p>
+          <p class="score" id="score"></p>
         </div>
         <div class="buttons-holder">
           <a
@@ -43,5 +43,10 @@
         </div>
       </div>
     </div>
+    <script>
+      let score = localStorage.getItem("score");
+      let scoreHolder = document.getElementById("score");
+      scoreHolder.textContent = score;
+    </script>
   </body>
 </html>

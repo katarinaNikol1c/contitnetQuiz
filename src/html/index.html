@@ -27,15 +27,15 @@
             <div class="scores">
               <li class="scores--position row-1-of-3">
                 <span class="score-place">1</span>
-                <span class="score-points">3456</span>
+                <span class="score-points" id="first"></span>
               </li>
               <li class="scores--position row-1-of-3">
                 <span class="score-place">2</span>
-                <span class="score-points">2234</span>
+                <span class="score-points" id="second"></span>
               </li>
               <li class="scores--position row-1-of-3">
                 <span class="score-place">3</span>
-                <span class="score-points">2150</span>
+                <span class="score-points" id="third"></span>
               </li>
             </div>
           </ol>
@@ -46,5 +46,24 @@
         </a>
       </div>
     </div>
+    <script>
+      const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+      const HIGH_SCORES = 3;
+      function saveHighScores() {
+        let score = localStorage.getItem("score");
+        highScores.push(score);
+        highScores.sort((a, b) => b.score - a.score);
+        highScores.splice(HIGH_SCORES);
+
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+      }
+      saveHighScores();
+      let first = document.getElementById("first"),
+        second = document.getElementById("second"),
+        third = document.getElementById("third");
+      first.textContent = highScores[2];
+      second.textContent = highScores[1];
+      third.textContent = highScores[0];
+    </script>
   </body>
 </html>

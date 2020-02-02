@@ -1,9 +1,6 @@
 const NUMQUESTIONS = 5;
-
 let questionsMap = new Map();
-
 let quizSequence = [];
-
 let quizStats = {
   counter: 0,
   score: 0,
@@ -328,34 +325,26 @@ function quizQuestions() {
   });
 }
 
-// Get the containers.
 let image = document.getElementById("photo"),
   answerA = document.getElementById("first-answer"),
   answerB = document.getElementById("second-answer"),
   answerC = document.getElementById("third-answer"),
   questionNumber = document.getElementById("question-num");
-// scoreCounter = document.getElementById("score-counter");
 
-// Add question keys to the quiz sequence array.
 function determineSequence() {
-  // Populate quizSequence.
   for (let [key, value] of questionsMap) {
     quizSequence.push(key);
   }
 
-  // Shuffle an array.
   function shuffle(array) {
     let currentIndex = array.length,
       temporaryValue,
       randomIndex;
 
-    // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-      // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
 
-      // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
@@ -363,7 +352,6 @@ function determineSequence() {
     return array;
   }
 
-  // Randomize quizSequence.
   quizSequence = shuffle(quizSequence);
 }
 
@@ -386,7 +374,6 @@ function getNextQuestion() {
   answerC.textContent = c;
   questionNumber.textContent = quizStats.counter;
 
-  // Track the current question.
   quizStats.currentQuestion = qn;
 
   answerA.addEventListener("click", checkTheAnswer);
@@ -402,7 +389,6 @@ function getNextQuestion() {
 function checkTheAnswer() {
   let givenAnswer = this.dataset.answer,
     correctAnswer = questionsMap.get(quizStats.currentQuestion).answer;
-  console.log(this.dataset.answer, correctAnswer);
 
   if (givenAnswer == correctAnswer) {
     quizStats.score += 750;
@@ -411,16 +397,11 @@ function checkTheAnswer() {
     this.classList.add("wrong");
   }
 
-  // Update the counter.
-  //scoreCounter.textContent = quizStats.correct;
-
-  // Check if max num of questions has been reached.
   if (quizStats.counter < NUMQUESTIONS) {
     setTimeout(clearClasses, 500);
     setTimeout(getNextQuestion, 500);
-  }
-  // If so, stop the quiz.
-  else {
+  } else {
+    localStorage.setItem("score", quizStats.score);
     showTheResults();
   }
 }
@@ -432,12 +413,11 @@ function clearClasses() {
 }
 
 function showTheResults() {
-  alert(quizStats.score);
+  document.location.pathname = "src/html/result.html";
 }
 
 (function startQuiz() {
   quizQuestions();
-  console.log(questionsMap);
   determineSequence();
   getNextQuestion();
 })();
