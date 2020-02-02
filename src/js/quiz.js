@@ -398,11 +398,11 @@ function checkTheAnswer() {
   }
 
   if (quizStats.counter < NUMQUESTIONS) {
-    setTimeout(clearClasses, 500);
-    setTimeout(getNextQuestion, 500);
+    setTimeout(clearClasses, 400);
+    setTimeout(getNextQuestion, 400);
   } else {
     localStorage.setItem("score", quizStats.score);
-    showTheResults();
+    setTimeout(showTheResults, 200);
   }
 }
 

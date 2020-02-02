@@ -41,23 +41,14 @@
           </ol>
         </div>
 
-        <a class="btn btn--white u-margin-top-medium" href="./quiz.html">
+        <a class="btn btn--white u-margin-top-small" href="./quiz.html">
           Play
         </a>
       </div>
     </div>
     <script>
-      const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-      const HIGH_SCORES = 3;
-      function saveHighScores() {
-        let score = localStorage.getItem("score");
-        highScores.push(score);
-        highScores.sort((a, b) => b.score - a.score);
-        highScores.splice(HIGH_SCORES);
+      let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-        localStorage.setItem("highScores", JSON.stringify(highScores));
-      }
-      saveHighScores();
       let first = document.getElementById("first"),
         second = document.getElementById("second"),
         third = document.getElementById("third");

@@ -17,19 +17,21 @@
   <body>
     <div class="main-container">
       <div>
-        <h1 class="main-header main-header--1">
+        <h1 class="main-header main-header--1 u-padding-bottom-small">
           Contitnet Quiz
         </h1>
       </div>
       <div class="home-box">
         <div class="result-container">
-          <h2 class="main-header main-header--2">Your score is :</h2>
-          <p class="score" id="score"></p>
+          <h2 class="main-header main-header--2 u-padding-top-medium">
+            Your score is :
+          </h2>
+          <p class="score u-padding-top-medium" id="score"></p>
         </div>
         <div class="buttons-holder">
           <a
             href="./quiz.html"
-            class="btn btn--small u-margin-top-medium u-margin-right"
+            class="btn btn--small u-margin-top-small u-margin-right"
           >
             <i class="material-icons" style="font-size: 40px;">
               replay
@@ -47,6 +49,16 @@
       let score = localStorage.getItem("score");
       let scoreHolder = document.getElementById("score");
       scoreHolder.textContent = score;
+      let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+      const HIGH_SCORES = 3;
+      function saveHighScores() {
+        highScores.push(score);
+        highScores.sort((a, b) => b - a);
+        highScores.splice(HIGH_SCORES);
+
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+      }
+      saveHighScores();
     </script>
   </body>
 </html>

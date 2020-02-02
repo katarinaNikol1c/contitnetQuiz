@@ -32,7 +32,7 @@ body {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #000; }
@@ -57,7 +57,8 @@ body {
     display: block;
     font-size: 3rem;
     color: #be8abf;
-    font-weight: 400; }
+    font-weight: 400;
+    letter-spacing: 0.7rem; }
   .main-header--3 {
     display: block;
     font-size: 1.8rem;
@@ -77,16 +78,30 @@ body {
   font-size: 2.5rem; }
 
 .score {
+  margin: 0 auto;
   font-size: 7rem;
+  font-weight: 700;
   line-height: 1.1;
   background-image: linear-gradient(to right, #f8c3af, #be8abf);
   color: transparent;
-  -webkit-background-clip: text; }
+  -webkit-background-clip: text;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
 
 .u-padding-bottom-big {
   padding-bottom: 4rem; }
 
-.u-margin-top-medium {
+.u-padding-bottom-small {
+  padding-bottom: 2rem; }
+
+.u-padding-top-medium {
+  padding-top: 3rem; }
+
+.u-padding-top-big {
+  padding-top: 4.6rem; }
+
+.u-margin-top-small {
   margin-top: 2.5rem; }
 
 .u-margin-left {
@@ -258,6 +273,6 @@ body {
   background-color: #fff;
   border-radius: 1rem;
   margin: 0 auto;
-  width: 46%;
+  width: 35%;
   height: 55%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64); }
