@@ -413,7 +413,7 @@ function clearClasses() {
 }
 
 function showTheResults() {
-  document.location.pathname = "src/html/result.html";
+  document.location.href = "./result.html";
 }
 
 (function startQuiz() {
