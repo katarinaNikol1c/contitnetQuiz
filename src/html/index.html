@@ -27,15 +27,15 @@
             <div class="scores">
               <li class="scores--position row-1-of-3">
                 <span class="score-place">1</span>
-                <span class="score-points" id="first"></span>
+                <span class="score-points" id="first">000</span>
               </li>
               <li class="scores--position row-1-of-3">
                 <span class="score-place">2</span>
-                <span class="score-points" id="second"></span>
+                <span class="score-points" id="second">000</span>
               </li>
               <li class="scores--position row-1-of-3">
                 <span class="score-place">3</span>
-                <span class="score-points" id="third"></span>
+                <span class="score-points" id="third">000</span>
               </li>
             </div>
           </ol>
@@ -52,9 +52,9 @@
       let first = document.getElementById("first"),
         second = document.getElementById("second"),
         third = document.getElementById("third");
-      first.textContent = highScores[2];
+      first.textContent = highScores[0];
       second.textContent = highScores[1];
-      third.textContent = highScores[0];
+      third.textContent = highScores[2];
     </script>
   </body>
 </html>
