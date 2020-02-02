@@ -16,6 +16,10 @@
 
 .u-margin-top-small {
   margin-top: 2.5rem;
+
+  @include respond(phone) {
+    margin-top: 3.5rem;
+  }
 }
 
 .u-margin-left {

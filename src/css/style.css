@@ -82,7 +82,8 @@ body {
     color: #fff; }
     @media only screen and (max-width: 37.5em) {
       .main-header--3 {
-        letter-spacing: 0.5rem; } }
+        letter-spacing: 0.5rem;
+        margin-top: 3rem; } }
 
 .score-place {
   border: 1px solid rgba(190, 138, 191, 0.4);
@@ -95,6 +96,9 @@ body {
   width: 75%;
   font-weight: 700;
   font-size: 2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .score-points {
+      font-size: 3.4rem; } }
 
 .score {
   margin: 0 auto;
@@ -107,6 +111,10 @@ body {
   animation-name: moveInBottom;
   animation-duration: 1s;
   animation-timing-function: ease-out; }
+  @media only screen and (max-width: 37.5em) {
+    .score {
+      letter-spacing: 1rem;
+      font-size: 10rem; } }
 
 .u-padding-bottom-big {
   padding-bottom: 4rem; }
@@ -122,6 +130,9 @@ body {
 
 .u-margin-top-small {
   margin-top: 2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-top-small {
+      margin-top: 3.5rem; } }
 
 .u-margin-left {
   margin-left: 1rem; }
@@ -157,15 +168,24 @@ body {
   padding: 0.6rem 4rem;
   border-radius: 10rem;
   font-size: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .btn--white {
+      font-size: 3rem;
+      width: 50%;
+      padding: 2.6rem 4rem; } }
 
 .btn--small {
   width: 7%;
   padding: 1.7rem 2rem;
   border-radius: 2rem;
   font-size: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .btn--small {
+      width: 23%;
+      padding: 2.7rem 2rem; } }
 
 .btn::after {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -201,6 +221,10 @@ body {
   margin: 0 auto;
   width: 50%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64); }
+  @media only screen and (max-width: 37.5em) {
+    .score-list-container {
+      width: 90%;
+      height: 50%; } }
 
 .score-list {
   text-align: center;
@@ -210,11 +234,18 @@ body {
   font-size: 3rem;
   color: #fea5ad;
   height: 50%; }
+  @media only screen and (max-width: 37.5em) {
+    .score-list {
+      height: 45%; } }
 
 .scores {
   margin: 0 auto;
   width: 36%;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .scores {
+      width: 65%;
+      margin-top: 6rem; } }
   .scores--position {
     font-size: 2.4rem;
     margin: 1.8rem auto;
@@ -226,6 +257,10 @@ body {
     border-radius: 35rem;
     box-shadow: 0 0.4rem 0rem 0.1rem rgba(190, 138, 191, 0.5);
     z-index: 5; }
+    @media only screen and (max-width: 37.5em) {
+      .scores--position {
+        height: 30%;
+        font-size: 3.4rem; } }
     .scores--position:hover {
       transition: all 0.3s;
       transform: scale(1.15) translateY(-0.6rem);
@@ -241,6 +276,11 @@ body {
   width: 37%;
   height: 78%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64); }
+  @media only screen and (max-width: 37.5em) {
+    .question-container {
+      width: 90%;
+      height: 60%;
+      margin-top: 1rem; } }
 
 .question-photo {
   display: block;
@@ -249,6 +289,9 @@ body {
   width: 80%;
   height: 100%;
   padding-top: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .question-photo {
+      width: 95%; } }
 
 .answer {
   position: relative;
@@ -257,6 +300,10 @@ body {
   margin: 3rem auto;
   font-size: 1.5rem;
   text-transform: uppercase; }
+  @media only screen and (max-width: 37.5em) {
+    .answer {
+      width: 67%;
+      font-size: 2.5rem; } }
   .answer label {
     display: block;
     background: #fff1f2;
@@ -295,3 +342,7 @@ body {
   width: 35%;
   height: 55%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba(0, 0, 0, 0.64); }
+  @media only screen and (max-width: 37.5em) {
+    .result-container {
+      width: 83%;
+      height: 40%; } }

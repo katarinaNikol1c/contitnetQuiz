@@ -33,6 +33,12 @@
     padding: 0.6rem 4rem;
     border-radius: 10rem;
     font-size: 2rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+      width: 50%;
+      padding: 2.6rem 4rem;
+    }
   }
 
   &--small {
@@ -40,10 +46,15 @@
     padding: 1.7rem 2rem;
     border-radius: 2rem;
     font-size: 4rem;
+
+    @include respond(phone) {
+      width: 23%;
+      padding: 2.7rem 2rem;
+    }
   }
 
   &::after {
-    content: '';
+    content: "";
     display: inline-block;
     height: 100%;
     width: 100%;

@@ -24,6 +24,10 @@
   margin: 0 auto;
   width: 50%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba($color-black, 0.64);
+  @include respond(phone) {
+    width: 90%;
+    height: 50%;
+  }
 }
 
 .score-list {
@@ -34,12 +38,21 @@
   font-size: 3rem;
   color: $color-primary-third;
   height: 50%;
+
+  @include respond(phone) {
+    height: 45%;
+  }
 }
 
 .scores {
   margin: 0 auto;
   width: 36%;
   position: relative;
+
+  @include respond(phone) {
+    width: 65%;
+    margin-top: 6rem;
+  }
 
   &--position {
     font-size: 2.4rem;
@@ -52,6 +65,11 @@
     border-radius: 35rem;
     box-shadow: 0 0.4rem 0rem 0.1rem rgba($color-primary-first, 0.5);
     z-index: 5;
+
+    @include respond(phone) {
+      height: 30%;
+      font-size: 3.4rem;
+    }
 
     &:hover {
       transition: all 0.3s;

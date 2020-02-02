@@ -5,6 +5,12 @@
   width: 37%;
   height: 78%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba($color-black, 0.64);
+
+  @include respond(phone) {
+    width: 90%;
+    height: 60%;
+    margin-top: 1rem;
+  }
 }
 
 .question-photo {
@@ -14,6 +20,10 @@
   width: 80%;
   height: 100%;
   padding-top: 2rem;
+
+  @include respond(phone) {
+    width: 95%;
+  }
 }
 
 .answer {
@@ -23,6 +33,11 @@
   margin: 3rem auto;
   font-size: 1.5rem;
   text-transform: uppercase;
+
+  @include respond(phone) {
+    width: 67%;
+    font-size: 2.5rem;
+  }
 
   label {
     display: block;

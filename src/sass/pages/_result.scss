@@ -5,4 +5,9 @@
   width: 35%;
   height: 55%;
   box-shadow: -1.2rem 1.5rem 2.2rem 0.5rem rgba($color-black, 0.64);
+
+  @include respond(phone) {
+    width: 83%;
+    height: 40%;
+  }
 }
